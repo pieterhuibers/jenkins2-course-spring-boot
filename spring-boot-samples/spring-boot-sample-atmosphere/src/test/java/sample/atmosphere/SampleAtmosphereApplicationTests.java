@@ -86,7 +86,6 @@ public class SampleAtmosphereApplicationTests {
 			logger.info("Waiting for response: latch=" + this.latch.getCount());
 			if (this.latch.await(10, TimeUnit.SECONDS)) {
 				logger.info("Got response: " + this.messagePayload.get());
-				logger.info("Got second response: " + this.messagePayload.get());
 			}
 			else {
 				logger.info("Response not received: latch=" + this.latch.getCount());
